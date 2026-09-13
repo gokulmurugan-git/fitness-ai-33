@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessAI Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="app">
+    <header class="header">
+        <div>
+            <h1>💪 FitnessAI</h1>
+            <p>Your Fitness Assistant</p>
+        </div>
+    </header>
+
+    <main class="chat-container">
+        <div id="chatBox" class="chat-box">
+            <div class="message bot-message">
+                <div class="avatar">🤖</div>
+                <div class="bubble">
+                    <strong>FitnessAI</strong>
+                    <p>Hello! 👋 I'm FitnessAI. Ask me about workouts, warm-ups,
+                    hydration, sleep, recovery, and healthy fitness habits.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="typing" id="typing">FitnessAI is typing...</div>
+
+        <div class="input-area">
+            <input type="text" id="messageInput"
+                   placeholder="Ask your fitness question..."
+                   autocomplete="off">
+            <button id="sendButton">Send</button>
+        </div>
+    </main>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
